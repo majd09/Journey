@@ -1,0 +1,981 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background:var(--eight-color);
+  letter-spacing: 1px;
+}
+
+#logo{
+  width: 10%;
+    float: left;
+    margin-top: 10px;
+}
+
+
+.image{
+  width: 40%;
+  margin:auto
+  
+}
+
+
+
+body a:hover {
+  text-decoration: none;
+}
+
+body a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+
+.home-btn{
+
+  background-color:#879eb6 ;
+}
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+font-family: 'Playfair Display', serif;
+}
+
+
+ul li {
+  display: inline-block;
+}
+
+
+.dark-mode{
+  --secondary-color:rgb(255, 255, 255);
+  --primary-color:#212121;
+  --third-color:rgb(236, 67, 67);
+  --forth-color:rgb(177, 195, 243);
+  --fifth-color:rgb(74, 74, 77);
+  --sexth-color:rgb(46, 45, 45);
+  
+  --eight-color:rgb(110, 104, 104);
+
+}
+
+:root:not(.dark-mode){
+  --sexth-color:rgb(33, 78, 202);
+  --primary-color:rgb(255, 255, 255);
+  --secondary-color:#212121;
+  --seventh-color:#4ba6f1;
+  --fifth-color:#4ba6f1;
+  /*rgb(33, 78, 202)*/
+
+
+}
+
+ul img{
+  width: 20px;
+  cursor: pointer;
+}
+
+
+/*-- //Reset-Code --*/
+h3.title {
+    font-size: 67px;
+    color: rgb(45, 79, 233) ;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.main-title-text {
+    padding: 7em 0em;
+}
+.about-para-txt p,.about-w3layouts-left p ,.count-wthree-num p,
+.ser-sevice-grid p,.blog-wthree-list p,.blog-date-time ul li a,
+.blog-two-two p,.booking-here p,.clients-w3pvt-txt p,.w3ls-bottom p,
+.contact-list-grid p,.contact-list-grid p a,.single-title p,.single-title ul li,.single-title ul li a{
+  font-size: 14px;
+  color:#b1a3a3;
+  line-height:25px;
+}
+.blog-wthree-list p,.booking-here p{color:var(--primary-color);}
+.count-wthree-num h4,.ser-sevice-grid h4,.blog-wthree-list h4 a,.blog-two-two h4 a,.w3ls-bottom h4,
+.contact-list-grid h4,.single-title h4,.comments-grid-right h4,.newsletter h4{
+    font-size: 27px;
+    color: var(--primary-color);
+}
+.ser-sevice-grid h4,.blog-two-two h4 a,.w3ls-bottom h4,
+.contact-list-grid h4,.single-title h4,.comments-grid-right h4{color:#0ddbd1;}
+/* header */
+/* navigation */
+/* CSS Document */
+.toggle-2,
+.toggle,
+[id^=drop] {
+  display: none;
+}
+
+
+/* Giving a background-color to the nav container. */
+
+ image #dark{
+  background-color: var(--primary-color);
+  width: 30px;
+}
+
+
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+#logo a {
+    float: left;
+    display: initial;
+    font-weight: 700;
+    font-size: 31px;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+    padding: 0;
+}
+/* Since we'll have the "ul li" "float:left"
+* we need to add a clear after the container. */
+
+nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Removing padding, margin and "list-style" from the "ul",
+* and adding "position:reltive" */
+
+nav ul {
+  float: right;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+}
+
+
+/* Positioning the navigation items inline */
+
+nav ul li {
+  margin: 0px;
+  display: inline-block;
+  
+}
+
+
+/* Styling the links */
+
+nav ul li a {
+  color: var(--third-color);
+  text-transform: capitalize;
+  font-weight:bold;
+  font-size: 14px;
+  letter-spacing: 0px;
+  background: transparent;
+  padding: 7px 28px;
+  display: inline-block;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+}
+
+nav ul li ul li:hover {
+  background: #f8faf9;
+}
+
+.menu li .drop-text:hover {
+  color: #000;
+  border: none;
+}
+
+
+/* Background color change on Hover */
+
+
+/*.menu li.active a,.menu li a:hover{border-bottom: 1px solid #d4d4d4;}*/
+
+.menu li a:hover {
+  opacity: 0.8;
+  color: #4e18cc;
+  background: rgb(246, 246, 247);
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+}
+
+
+/* Hide Dropdowns by Default
+* and giving it a position of absolute */
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 33px;
+  background:#e8e8e8;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: -1px 1px 5px black;
+}
+/* Display Dropdowns on Hover */
+
+nav ul li:hover>ul {
+  display: inherit;
+}
+/* Fisrt Tier Dropdown */
+
+nav ul ul li {
+  float: none;
+  display: list-item;
+  position: relative;
+}
+nav ul ul li a {
+  color: #000;
+  padding: 5px 10px;
+  display: block;
+  background: transparent;
+}
+/* Second, Third and more Tiers	
+* We move the 2nd and 3rd etc tier dropdowns to the left
+* by the amount of the width of the first tier.
+*/
+
+nav ul ul ul li {
+  position: relative;
+  top: -60px;
+  /* has to be the same number as the "width" of "nav ul ul li" */
+  left: 170px;
+}
+/* Change ' +' in order to change the Dropdown symbol */
+
+li>a:only-child:after {
+  content: '';
+}
+
+a.reqe-button {
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 4px;
+}
+/* Media Queries
+--------------------------------------------- */
+
+@media(max-width: 800px) {
+  nav a {
+    font-size: 13px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #logo {
+    display: block;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    float: none;
+  }
+  nav {
+    margin: 0;
+  }
+  /* Hide the navigation menu by default */
+  /* Also hide the  */
+  .toggle+a,
+  .menu {
+    display: none;
+  }
+  /* Stylinf the toggle lable */
+  .toggle {
+    display: block;
+    padding: 6px 17px;
+    font-size: 14px;
+    text-decoration: none;
+    border: none;
+    float: right;
+    background-color:#0ddbd1;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  .menu .toggle {
+    float: none;
+    text-align: center;
+    margin: auto;
+    max-width: 138px;
+    padding: 10px 18px;
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 1px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+  }
+  .menu .toggle:hover {
+    color: #000;
+    opacity: .8;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+  }
+  .toggle:hover {
+    color: #000;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+  }
+  label.toggle.toogle-2 {
+    background: transparent;
+    text-transform: capitalize;
+    font-size: 14px;
+    color: #000;
+  }
+  /* Display Dropdown when clicked on Parent Lable */
+  [id^=drop]:checked+ul {
+    display: block;
+    background: var(--primary-color);
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+  }
+  /* Change menu item's width to 100% */
+  nav ul li {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+  }
+  nav ul ul .toggle,
+  nav ul ul a {
+    padding: 0 40px;
+  }
+  nav ul ul ul a {
+    padding: 0 80px;
+  }
+  nav a:hover,
+  nav ul ul ul a {
+    background-color: transparent;
+  }
+  nav ul li ul li .toggle,
+  nav ul ul a,
+  nav ul ul ul a {
+    padding: 14px 20px;
+    color:var(--primary-color);
+    font-size: 15px;
+  }
+  /* 
+nav ul li ul li .toggle,
+nav ul ul a {
+background-color: #212121;
+} */
+  /* Hide Dropdowns by Default */
+  nav ul ul {
+    float: none;
+    position: static;
+    color: var(--primary-color);
+    /* has to be the same number as the "line-height" of "nav a" */
+  }
+  /* Hide menus on hover */
+  nav ul ul li:hover>ul,
+  nav ul li:hover>ul {
+    display: none;
+  }
+  /* Fisrt Tier Dropdown */
+  nav ul ul li {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+  nav ul ul ul li {
+    position: static;
+    /* has to be the same number as the "width" of "nav ul ul li" */
+  }
+  nav a {
+    color: #000;
+    font-size: 15px;
+  }
+  .menu li.active a,
+  .menu li a:hover {
+    background: transparent;
+  }
+}
+
+@media all and (max-width: 568px) {
+  nav a,
+  .menu .toggle,
+  nav ul li ul li .toggle,
+  nav ul ul a,
+  nav ul ul ul a {
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 320px) {
+  nav a,
+  .menu .toggle,
+  nav ul li ul li .toggle,
+  nav ul ul a,
+  nav ul ul ul a {
+    font-size: 13px;
+  }
+}
+/*-- dropdown --*/
+/*--inner-banner -- */
+.inner_page-banner {
+  text-align: center;
+  background: url(../images/Czech\ Republic_©Christophe\ Vander\ Eecken_0.jpg) no-repeat center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  min-height:350px;
+}
+
+.using-border {
+padding-top: 5em;
+}
+
+ul.short_ls li a {
+  color:var(--primary-color);
+  text-decoration: none;
+}
+
+ul.short_ls li {
+  list-style: none;
+  display: inline-block;
+  letter-spacing: 1px;
+  font-size:44px;
+  color: var(--primary-color);
+  font-weight:600;
+}
+/*-- //inner-banner --*/
+/* banner */
+
+.main-top {
+  background: url(../images/bb6.jpg) no-repeat bottom;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  min-height: 800px;
+}
+
+
+
+
+
+.headder-top {
+    position: absolute;
+    width: 100%;
+    background: var(--fifth-color);
+    padding: 1em 2em;
+    box-shadow: -1px -2px 6px black;
+	z-index:99;
+}
+.style-banner {
+  padding-top:21em;
+  padding-right: 4em;
+
+}
+.two-demo-button p {
+    color: #dadada;
+    font-weight: 100;
+    padding-left: 29em;
+    line-height: 28px;
+    font-size: 16px;
+}
+.banner-right-txt{  text-align:right;}
+.banner-right-txt h4 {
+    color: #ffeaea;
+    font-size: 2.4em;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 51px;
+    letter-spacing: 5px;
+}
+.social-icons ul li a span,.footer-icons ul li a span {
+  color: #e0e0e0;
+  font-size: 20px;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -moz-transition: 0.5s all;
+}
+.social-icons ul li a span:hover,.footer-icons ul li a span:hover{
+    color: #cacaca;
+}
+.social-icons ul li {
+    display: block;
+    padding-top: 27px;
+    padding-left: 13px;
+}
+.view-buttn a {
+    font-size: 15px;
+    color: var(--primary-color);
+    text-decoration: none;
+    text-transform: capitalize;
+    display: inline-block;
+    letter-spacing: 1px;
+    outline: none;
+    font-weight: 400;
+    border-radius: 0px;
+    background-color:#00264d;
+    padding: 8px 15px;
+    border: none;
+}
+.view-buttn a:hover,button.btn1:hover,.sent-butnn:hover {
+    opacity: 0.8;
+}
+.active a{
+  background-color: var(--primary-color);
+  color: var(--third-color);
+}
+
+
+/*-- ===== about =====--*/
+.about-w3layouts-left h6,.clients-w3pvt-txt h4 {
+    font-size: 20px;
+    color: #0ddbd1;
+    text-transform: capitalize;
+}
+.about-span-txt span {
+    font-size: 31px;
+    color: var(--primary-color);
+    line-height: 66px;
+}
+.about-span-txt{
+    background: #3146be;
+}
+/*--//about-- */
+
+
+
+/*--service --*/
+.ser-fashion-grid {
+    padding: 1.5em 1.5em;
+    background: #efefef;
+    box-shadow: 1px 0px 7px #d2d2d2;
+}
+.about-icon span,.w3ls-bottom span{
+    font-size: 40px;
+    color: #000;
+}
+/*--//service --*/
+
+
+
+/* ====== gallery image popup ====== */
+
+.popup-effect {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 0ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 99;
+}
+
+.popup-effect:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  background:var(--primary-color);
+  border-radius: 4px;
+  max-width: 430px;
+  position: relative;
+  margin: 3em auto;
+  padding: 3em 2em;
+  z-index: 999;
+  text-align: center;
+}
+
+.popup .close {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
+.popup .close:hover {
+  color: #000;
+}
+/* //gallery image popup */
+
+
+
+/*--blog--*/
+.blog-wthree-list {
+    background: url(../images/b5.jpg) no-repeat bottom;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    padding: 15em 7em 5em;
+}
+.blog-date-time ul li:nth-child(2) {
+    padding-left: 11px;
+}
+.blog-two-two {
+    padding: 5em 3em;
+}
+.newsletter {
+    background: #000;
+    padding: 4em 10em;
+}
+.newsletter input[type="email"] {
+    outline: none;
+    padding: 13px 15px;
+    color: #000;
+    font-size: 14px;
+    width: 80%;
+    border-radius: 0px;
+    background: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+button.btn1 {
+    width: 20%;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 11.5px 0;
+    font-size: 16px;
+    background:#0ddbd1;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+/*--// blog-- */
+/* price */
+.w3ls-bottom {
+    background: rgba(214, 214, 214, 0.7);
+    padding: 2em 1.5em;
+    box-shadow: 0 0 8px 0 rgba(161, 161, 161, 0.5);
+    text-align: center;
+}
+span.sup-doller {
+    padding-left: 5px;
+}
+/*--//price--*/
+/*--booking-- */
+.booking{    background: url(../images/cc1.jpg) no-repeat bottom;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;}
+.booking-here h5 {
+    font-size: 3em;
+    color:var(--primary-color);
+    font-weight: 700;
+}
+/*--//booking--*/
+/*--contact-- */
+.address_mail_footer_grids iframe {
+    width: 100%;
+    height: 29em;
+    border: none;
+}
+.contact-forms input, .contact-forms textarea {
+    width: 100%;
+    font-size: 14px;
+    color: #000;
+    padding: .8em 0em;
+    background: transparent;
+    /* outline: none; */
+    border: none;
+    border-bottom: 1px solid #000;
+    border-radius: 0px;
+    /* outline: none !important; */
+}
+.contact-forms textarea {
+    resize: none;
+    height: 8em;
+}
+.sent-butnn {
+    width: 100%;
+    font-size: 17px;
+    padding: 11px 0px;
+    color: var(--primary-color);
+    margin-top: 1em;
+    background: #0ddbd1;
+	letter-spacing:1px;
+}
+/*--//contact-- */
+/*--footer-- */
+
+
+
+
+
+
+footer{
+    background:var(--sexth-color);
+}
+ .footer-copy-write {color:var( --third-color);}
+.footer-bottom-txt h2 a {
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+.footer-icons{text-align:right;}
+.bottem-txt-footer p {
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.bottem-txt-footer p a {
+    color: #3a8f96;
+    font-size: 14px;
+}
+a.move-top {
+    display: inline-block;
+    background:var(--primary-color);
+    width: 43px;
+    height: 41px;
+}
+a.move-top span {
+color: #000;
+font-size: 26px;
+line-height: 38px;
+}
+
+/*--responsive--*/
+
+
+@media(max-width:1280px){
+    .main-top {
+        min-height: 600px;
+    }
+    .two-demo-button p {
+        padding-left: 25em;
+        line-height: 25px;
+        font-size: 15px;
+    }
+    .style-banner {
+        padding-top: 13em;
+    }
+    h3.title {
+        font-size: 61px;
+    }
+    .about-icon span, .w3ls-bottom span {
+        font-size: 36px;
+    }
+    .blog-wthree-list {
+        padding: 11em 5em 5em;
+    }
+    .booking-here h5 {
+        font-size: 2.5em;	
+    }
+    .inner_page-banner {
+        min-height: 296px;
+    }
+    .using-border {
+        padding-top: 5em;
+    }
+    .sent-butnn {
+        font-size: 16px;
+        margin-top: .7em;
+    }
+}
+
+
+@media(max-width:991px){
+    .social-icons ul li a span, .footer-icons ul li a span {
+        font-size: 17px;
+    }
+    .social-icons ul li {
+    padding-top: 22px;
+    padding-left: 10px;
+    }
+    nav ul li a {
+    letter-spacing: 1px;
+    color: var(--primary-color);
+    }
+    .about-imgs-txt:nth-child(2),.about-two-grids {
+    margin-top: 36px;
+    }
+    .main-title-text {
+    padding: 3em 0em;
+    text-align: center;
+    }
+    .service-grid-wthree:nth-child(3){
+    margin-top: 16px;
+    }
+    .blog-two-two {
+    padding: 1.5em 1.5em;
+    }
+    .count-wthree-num h4, .ser-sevice-grid h4, .blog-wthree-list h4 a, .blog-two-two h4 a, .w3ls-bottom h4, .contact-list-grid h4, .single-title h4, .comments-grid-right h4, .newsletter h4 {
+        font-size: 23px;
+    }
+    .booking-here h5 {
+        font-size: 2.1em;
+    }
+    .inner_page-banner {
+        min-height: 279px;
+    }
+    .using-border {
+        padding-top: 5em;
+    }
+    ul.short_ls li {
+        font-size: 35px;
+    }
+    .contact-list-grid:nth-child(3),.contact-list-grid:nth-child(4){
+        margin-top: 23px;
+    }
+    .newsletter {
+        padding: 2.5em 5em;
+    }
+    .newsletter input[type="email"] {
+        width: 75%;
+        }
+    button.btn1 {
+        width: 25%;
+    }
+}
+
+@media(max-width:767px){
+    .headder-top {
+        padding: .7em 1em;
+    }
+    nav ul li a {
+        padding: 4px 20px;
+        color: #00264d;
+    }
+    .using-border {
+        padding-top: 5em;
+    }
+    .banner-right-txt h4 {
+        letter-spacing: 1px;
+        font-size: 1.6em;
+    }
+    .view-buttn a {
+    font-size: 14px;
+    }
+    .about-span-txt span {
+        font-size: 26px;
+    }
+    .count-wthree-num {
+        padding: 1.5em 1.5em;
+    }
+    .count-wthree-num h5 {
+        font-size: 28px;
+    }
+    .main-title-text {
+        padding: 2em 0em;
+    }
+    .blog-wthree-list {
+        padding: 6em 2.5em 3em;
+    }
+    .booking-here h5 {
+        font-size: 1.8em;
+    }
+    .footer-bottom-txt h2 a {
+        font-size: 25px;
+    }
+    .inner_page-banner {
+        min-height: 224px;
+    }
+    .newsletter {
+        padding: 2em 3em;
+    }
+    .newsletter input[type="email"] {
+        width: 65%;
+    }
+    button.btn1 {
+        width: 35%;
+}
+}
+
+@media(max-width:568px){
+    .social-icons ul li {
+        display: inline-block;
+        text-align:center;
+    }	
+    .using-border {
+        padding-top: 5em;
+    }
+    .social-icons {text-align:center;
+    margin-bottom:15px}
+    .banner-right-txt {
+    text-align: center;
+    }
+    .style-banner {
+    padding-top: 8em;
+    }
+    .about-span-txt{
+    margin:15px 0px; 
+    }
+    .service-grid-wthree:nth-child(2) {
+        margin-top: 16px;
+    }
+    .booking-here h5 {
+        font-size: 1.6em;
+    }
+    .clients-w3pvt-txt{
+        text-align: center;
+        margin:15px 0px;
+    }
+    h3.title {
+        font-size: 37px;
+        letter-spacing: 2px;
+    }
+    .footer-icons {
+        text-align: center;
+    }
+    .pricing-grid:nth-child(2) {
+        margin-top: 33px;
+    }
+    .gallery-img-grid{
+    width: 50%;
+    }
+    .address_mail_footer_grids iframe {
+    height: 17em;
+    }
+    .sent-butnn {
+    font-size: 15px;
+    }
+    .contact-list-grid:nth-child(2) {
+        margin-top: 23px;
+    }
+    .single-title {
+        margin: 17px 0px;
+    }
+}
+
